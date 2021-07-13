@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="20" y="222.5" width="335" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="qvR-eZ-l7y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MN2-I3-ftu">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MN2-I3-ftu" firstAttribute="top" secondItem="qvR-eZ-l7y" secondAttribute="bottom" id="2Wb-gY-jTz"/>
+                            <constraint firstItem="qvR-eZ-l7y" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8Ql-ww-Y9H"/>
+                            <constraint firstAttribute="trailing" secondItem="qvR-eZ-l7y" secondAttribute="trailing" id="GBO-mq-0AO"/>
+                            <constraint firstAttribute="bottom" secondItem="qvR-eZ-l7y" secondAttribute="bottom" id="LhJ-tH-wSS"/>
+                            <constraint firstAttribute="bottom" secondItem="MN2-I3-ftu" secondAttribute="bottom" id="OZV-Vh-mqD"/>
+                            <constraint firstItem="qvR-eZ-l7y" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="PbP-jG-nF4"/>
+                            <constraint firstAttribute="centerX" secondItem="GJd-Yh-RWb" secondAttribute="centerX" id="Q3B-4B-g5h"/>
+                            <constraint firstItem="MN2-I3-ftu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="akx-eg-2ui"/>
+                            <constraint firstItem="MN2-I3-ftu" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="i1E-0Y-4RG"/>
+                            <constraint firstItem="MN2-I3-ftu" firstAttribute="top" secondItem="qvR-eZ-l7y" secondAttribute="bottom" id="miY-hn-N5w"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="bottom" multiplier="1/3" id="moa-c2-u7t"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" symbolic="YES" id="x7j-FC-K8j"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="350.89285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LaunchScreen" width="320" height="568"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

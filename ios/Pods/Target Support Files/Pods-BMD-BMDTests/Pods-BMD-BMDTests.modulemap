@@ -1,0 +1,6 @@
+module Pods_BMD_BMDTests {
+  umbrella header "Pods-BMD-BMDTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

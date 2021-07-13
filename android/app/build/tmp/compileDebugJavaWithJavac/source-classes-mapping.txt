@@ -1,0 +1,16 @@
+com/bmd/ReactNativeFlipper.java
+ com.bmd.ReactNativeFlipper
+ com.bmd.ReactNativeFlipper$1
+ com.bmd.ReactNativeFlipper$2
+ com.bmd.ReactNativeFlipper$2$1
+com/bmd/MainActivity.java
+ com.bmd.MainActivity
+com/bmd/BuildConfig.java
+ com.bmd.BuildConfig
+com/bmd/SplashActivity.java
+ com.bmd.SplashActivity
+com/bmd/MainApplication.java
+ com.bmd.MainApplication
+ com.bmd.MainApplication$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
