@@ -12,6 +12,7 @@ class Splash extends Component {
             StatusBar.setHidden(false)
            
         }, 1800) 
+        this.props.navigation.navigate('AppTabs')
     }
 
     render() {

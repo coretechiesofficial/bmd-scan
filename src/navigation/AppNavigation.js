@@ -3,9 +3,11 @@ import { View, Text , StatusBar} from "react-native";
 import { createStackNavigator, TransitionPresets, CardStyleInterpolators } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
+import {AppTabs} from './TabNavigation'
+
 import Splash from '../splash/Splash'
-
-
+import ScanNfc from '../components/ScanNfc';
+import History from '../components/History';
 
 
 
@@ -20,7 +22,10 @@ function AppNavigation() {
             }}>
                
                 <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
-                     
+                <Stack.Screen name="ScanNfc" component={ScanNfc} options={{ headerShown: false }} />
+                <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
+                
+                <Stack.Screen name="AppTabs" component={AppTabs} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )
