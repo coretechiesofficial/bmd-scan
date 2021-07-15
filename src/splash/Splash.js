@@ -6,12 +6,12 @@ import SplashScreen from 'react-native-splash-screen';
 class Splash extends Component {
 
     componentDidMount() {
-       
+        
         setTimeout(() => {
             SplashScreen.hide()
-            StatusBar.setHidden(false)
+            
            
-        }, 1800) 
+        }, 1200) 
         this.props.navigation.navigate('AppTabs')
     }
 

@@ -741,6 +741,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -879,6 +880,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color primary_dark
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -893,7 +895,6 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
-color status_bar_color
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -1354,6 +1355,8 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable node_modules_reactnavigation_stack_src_views_assets_backicon
+drawable node_modules_reactnavigation_stack_src_views_assets_backiconmask
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1367,6 +1370,16 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable redbox_top_border_background
+drawable src_assets_images_checkedbox
+drawable src_assets_images_down_arrow
+drawable src_assets_images_file
+drawable src_assets_images_logo
+drawable src_assets_images_nfc
+drawable src_assets_images_nfc1
+drawable src_assets_images_qr_code
+drawable src_assets_images_qr_code_1
+drawable src_assets_images_search
+drawable src_assets_images_uncheck
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1820,6 +1833,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap icon
 plurals mtrl_badge_content_description
+raw app
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

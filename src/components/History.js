@@ -95,10 +95,10 @@ class History extends Component {
                                         <FastImage source={require('../assets/images/uncheck.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
                                 }
 
-                                <View style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
+                                <TouchableOpacity activeOpacity={0.7} onPress={()=> this.props.navigation.navigate('Data')} style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
                                     <FastImage source={item.img} style={{ width: 30, height: 30, }} resizeMode="contain" />
                                     <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.name}</Text>
-                                </View>
+                                </TouchableOpacity>
 
                                 <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: 40 }}>
                                     <Text numberOfLines={1} style={{ color: '#898c8f', fontSize: 12, left: 12 }}>{item.date}</Text>

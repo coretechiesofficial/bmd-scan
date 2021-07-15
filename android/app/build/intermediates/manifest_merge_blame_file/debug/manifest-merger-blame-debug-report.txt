@@ -19,7 +19,7 @@
 13-->[com.facebook.flipper:flipper:0.75.1] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a8f6015f96666ab8d93bfe5b64998bc8/jetified-flipper-0.75.1/AndroidManifest.xml:16:22-73
 14
 15    <application
-15-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:6:5-39:19
+15-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:6:5-40:19
 16        android:name="com.bmd.MainApplication"
 16-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:7:7-38
 17        android:allowBackup="false"
@@ -60,37 +60,35 @@
 34            </intent-filter>
 35        </activity>
 36        <activity
-36-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:26:7-38:18
+36-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:26:7-39:18
 37            android:name="com.bmd.MainActivity"
 37-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:27:9-37
 38            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
 38-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:29:9-86
-39            android:label="@string/app_name"
-39-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:28:9-41
-40            android:launchMode="singleTask"
-40-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:30:9-40
-41            android:screenOrientation="portrait"
-41-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:32:9-45
-42            android:windowSoftInputMode="adjustResize" >
-42-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:31:9-51
-43            <intent-filter>
-43-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:20:8-23:24
-44                <action android:name="android.intent.action.MAIN" />
-44-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:21:12-64
-44-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:21:20-61
-45
-46                <category android:name="android.intent.category.LAUNCHER" />
-46-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:22:12-72
-46-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:22:22-69
-47            </intent-filter>
-48        </activity>
-49
-50        <meta-data
-50-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
-51            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-51-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
-52            android:value="GlideModule" />
-52-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
-53    </application>
-54
-55</manifest>
+39            android:exported="true"
+39-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:32:9-32
+40            android:label="@string/app_name"
+40-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:28:9-41
+41            android:launchMode="singleTask"
+41-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:30:9-40
+42            android:screenOrientation="portrait"
+42-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:33:9-45
+43            android:windowSoftInputMode="adjustResize" >
+43-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:31:9-51
+44            <intent-filter>
+44-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:35:9-38:25
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:21:12-64
+45-->/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/AndroidManifest.xml:21:20-61
+46            </intent-filter>
+47        </activity>
+48
+49        <meta-data
+49-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+50            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+50-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+51            android:value="GlideModule" />
+51-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /Users/coretechies/.gradle/caches/transforms-2/files-2.1/a04caada1575963807067fecab4ddb7f/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+52    </application>
+53
+54</manifest>

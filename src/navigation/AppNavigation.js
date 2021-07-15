@@ -8,7 +8,7 @@ import {AppTabs} from './TabNavigation'
 import Splash from '../splash/Splash'
 import ScanNfc from '../components/ScanNfc';
 import History from '../components/History';
-
+import Data from '../components/Data'
 
 
 
@@ -24,6 +24,7 @@ function AppNavigation() {
                 <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
                 <Stack.Screen name="ScanNfc" component={ScanNfc} options={{ headerShown: false }} />
                 <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
+                <Stack.Screen name="Data" component={Data} options={{ headerShown: false }} />
                 
                 <Stack.Screen name="AppTabs" component={AppTabs} options={{ headerShown: false }} />
             </Stack.Navigator>
