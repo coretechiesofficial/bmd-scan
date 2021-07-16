@@ -8,20 +8,12 @@
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_file.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backiconmask.png"
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_web.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_web.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xhdpi/icon.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_icon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-mdpi/icon.png"
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_check_4.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_check_4.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_uncheck.png.flat",
@@ -36,20 +28,108 @@
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_nfc1.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_nfc1.png"
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_postage_stamp.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_postage_stamp.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_nfc.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_nfc.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_checkedbox.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_checkedbox.png"
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_phone.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_phone.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/raw_app.json.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/raw/app.json"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_account_1.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_account_1.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_cake_variant.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_cake_variant.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_qr_code.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_qr_code.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_map_marker.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_map_marker.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_office_building.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_office_building.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_down_arrow.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_down_arrow.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_email.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_email.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_node_modules_reactnavigation_stack_src_views_assets_backiconmask.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/node_modules_reactnavigation_stack_src_views_assets_backiconmask.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_card_account_details.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_card_account_details.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-xxxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xhdpi/icon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_icon.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-mdpi/icon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_city_variant.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_city_variant.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_nfc1.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_nfc1.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_note_edit.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_note_edit.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_checkedbox.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_checkedbox.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_logo.png.flat",
@@ -62,10 +142,6 @@
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -88,51 +164,35 @@
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
-    },
-    {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_search.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_search.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_qr_code.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_qr_code.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_road_variant.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_road_variant.png"
+    },
+    {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable_background_splash.xml.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable/background_splash.xml"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_writing.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_writing.png"
     },
     {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_down_arrow.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_down_arrow.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-hdpi_node_modules_reactnavigation_stack_src_views_assets_backicon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-hdpi/node_modules_reactnavigation_stack_src_views_assets_backicon.png"
-    },
-    {
-        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
-        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
-    },
-    {
         "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_icon.png.flat",
         "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/mipmap-xxhdpi/icon.png"
+    },
+    {
+        "merged": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/build/intermediates/res/merged/debug/drawable-mdpi_src_assets_images_fax.png.flat",
+        "source": "/Volumes/CTIPL/CT_INDIA/ReactNative/BMD/bmd-scan/android/app/src/main/res/drawable-mdpi/src_assets_images_fax.png"
     }
 ]

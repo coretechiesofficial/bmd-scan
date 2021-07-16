@@ -8,36 +8,45 @@ import {
 import FastImage from 'react-native-fast-image'
 import { colors } from '../styles/styles';
 import { AppHeader } from '../utility/AppHeader'
+import { ServiceConstant } from '../constants/ServiceConstant'
 
 
+// const data = [
+//     {
+//         name: '15645874684142',
+//         date: 'July 01, 2021',
+//         img: require('../assets/images/qr_code_1.png'),
+//         selected: true
+//     },
 
-const data = [
-    {
-        name: '15645874684142',
-        date: 'July 01, 2021',
-        img: require('../assets/images/qr_code_1.png'),
-        selected: true
-    },
+//     {
+//         name: '34564745663454',
+//         date: 'July 05, 2021',
+//         img: require('../assets/images/qr_code_1.png'),
+//         selected: false
+//     },
 
-    {
-        name: '34564745663454',
-        date: 'July 05, 2021',
-        img: require('../assets/images/qr_code_1.png'),
-        selected: false
-    },
-
-    {
-        name: '34564745663454',
-        date: 'July 04, 2021',
-        img: require('../assets/images/nfc1.png'),
-        selected: false
-    }
-]
+//     {
+//         name: '34564745663454',
+//         date: 'July 04, 2021',
+//         img: require('../assets/images/nfc1.png'),
+//         selected: false
+//     }
+// ]
 
 class History extends Component {
 
+    state = {
+        data: []
+    }
+    componentDidMount() {
+        console.log('----', ServiceConstant.get_historydata())
+        this.setState({ data: [...this.state.data, ServiceConstant.get_historydata()] })
+
+    }
 
     render() {
+        console.log('ff', this.state.data.length)
         return (
             <SafeAreaView style={{ flex: 1, backgroundColor: '#f3fcff' }}>
                 <AppHeader navigation={this.props.navigation} title="History" />
@@ -53,7 +62,7 @@ class History extends Component {
                     elevation: 3,
                 }}>
 
-                    <TouchableOpacity activeOpacity={0.7}  style={{ width: '35%', justifyContent: 'center', alignItems: 'center' }}>
+                    <TouchableOpacity activeOpacity={0.7} style={{ width: '35%', justifyContent: 'center', alignItems: 'center' }}>
                         <Text style={{ color: colors.darkish_blue, fontSize: 14 }}>All</Text>
                     </TouchableOpacity>
 
@@ -81,36 +90,57 @@ class History extends Component {
 
                     elevation: 3
                 }}>
-                    <FlatList
-                        data={data}
-                        showsHorizontalScrollIndicator={false}
-                        showsVerticalScrollIndicator={false}
-                        renderItem={({ item, index }) => (
-                            <View style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center' }}>
-                                {
-                                    item.selected == true
-                                        ?
-                                        <FastImage source={require('../assets/images/checkedbox.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
-                                        :
-                                        <FastImage source={require('../assets/images/uncheck.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
-                                }
+                    {
+                        this.state.data.length > 0
+                            ?
+                            <>
+                                <FlatList
+                                    data={this.state.data}
+                                    showsHorizontalScrollIndicator={false}
+                                    showsVerticalScrollIndicator={false}
+                                    renderItem={({ item, index }) => (
 
-                                <TouchableOpacity activeOpacity={0.7} onPress={()=> this.props.navigation.navigate('Data')} style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
-                                    <FastImage source={item.img} style={{ width: 30, height: 30, }} resizeMode="contain" />
-                                    <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.name}</Text>
-                                </TouchableOpacity>
+                                        <View style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center' }}>
+                                            {
+                                                item.selected == true
+                                                    ?
+                                                    <FastImage source={require('../assets/images/checkedbox.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
+                                                    :
+                                                    <FastImage source={require('../assets/images/uncheck.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
+                                            }
 
-                                <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: 40 }}>
-                                    <Text numberOfLines={1} style={{ color: '#898c8f', fontSize: 12, left: 12 }}>{item.date}</Text>
+                                            <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('Data')} style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
+                                                {
+                                                    item.type == 'QR_CODE'
+                                                        ?
+                                                        <FastImage source={require('../assets/images/qr_code_1.png')} style={{ width: 30, height: 30, }} resizeMode="contain" />
+                                                        :
+                                                        null
+                                                }
+
+                                                <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.tit}</Text>
+                                            </TouchableOpacity>
+
+                                            <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: 40 }}>
+                                                <Text numberOfLines={1} style={{ color: '#898c8f', fontSize: 12, left: 12 }}>July 01, 2021</Text>
+                                            </View>
+                                        </View>
+                                    )}
+                                />
+                                <View style={{ marginVertical: 10, justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: 10 }}>
+                                    <TouchableOpacity activeOpacity={0.8} style={{ backgroundColor: colors.darkish_blue, width: 100, height: 40, borderRadius: 5, justifyContent: 'center', alignItems: 'center' }}>
+                                        <Text style={{ color: 'white', fontSize: 13 }}>Delete</Text>
+                                    </TouchableOpacity>
                                 </View>
+                            </>
+
+
+                            :
+                            <View style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                                <Text>No records found.</Text>
                             </View>
-                        )}
-                    />
-                    <View style={{ marginVertical: 10, justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal:10 }}>
-                        <TouchableOpacity activeOpacity={0.8} style={{ backgroundColor: colors.darkish_blue, width: 100, height: 40, borderRadius: 5, justifyContent: 'center', alignItems: 'center' }}>
-                            <Text style={{ color: 'white', fontSize:13 }}>Delete</Text>
-                        </TouchableOpacity>
-                    </View>
+                    }
+
                 </View>
             </SafeAreaView>
         )

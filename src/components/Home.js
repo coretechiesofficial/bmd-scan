@@ -22,7 +22,9 @@ class Home extends Component {
                 <View style={{ marginTop: 30, marginHorizontal: 25, flexDirection: 'row', }}>
 
                     {/* ------------------Scan Code View start here----------------------- */}
-                    <View
+                    <TouchableOpacity
+                     activeOpacity={0.9}
+                     onPress={()=> this.props.navigation.navigate('Scancode')}
                         style={{
                             backgroundColor: colors.duck_egg_blue,
                             justifyContent: 'center',
@@ -42,7 +44,7 @@ class Home extends Component {
                         }}>
                         <FastImage source={require('../assets/images/qr_code.png')} style={{ width: 60, height: 60 }} resizeMode="contain" />
                         <Text style={{ color: colors.denim, fontSize: 12, top: 5 }}>Scan Code</Text>
-                    </View>
+                    </TouchableOpacity>
                     {/* ------------------Scan Code View end here----------------------- */}
 
                     {/* ------------------Scan Tag View start here----------------------- */}

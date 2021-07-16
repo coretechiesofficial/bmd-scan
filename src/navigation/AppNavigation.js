@@ -9,6 +9,7 @@ import Splash from '../splash/Splash'
 import ScanNfc from '../components/ScanNfc';
 import History from '../components/History';
 import Data from '../components/Data'
+import Scancode from '../components/ScanCode';
 
 
 
@@ -25,6 +26,7 @@ function AppNavigation() {
                 <Stack.Screen name="ScanNfc" component={ScanNfc} options={{ headerShown: false }} />
                 <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
                 <Stack.Screen name="Data" component={Data} options={{ headerShown: false }} />
+                <Stack.Screen name="Scancode" component={Scancode} options={{ headerShown: false }} />
                 
                 <Stack.Screen name="AppTabs" component={AppTabs} options={{ headerShown: false }} />
             </Stack.Navigator>
