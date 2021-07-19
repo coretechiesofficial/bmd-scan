@@ -1,5 +1,5 @@
 export class ServiceConstant {
-    static data = []
+    static data = ''
 
     static set_historydata(data) {
         this.data = data

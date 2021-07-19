@@ -11,42 +11,22 @@ import { AppHeader } from '../utility/AppHeader'
 import { ServiceConstant } from '../constants/ServiceConstant'
 
 
-// const data = [
-//     {
-//         name: '15645874684142',
-//         date: 'July 01, 2021',
-//         img: require('../assets/images/qr_code_1.png'),
-//         selected: true
-//     },
 
-//     {
-//         name: '34564745663454',
-//         date: 'July 05, 2021',
-//         img: require('../assets/images/qr_code_1.png'),
-//         selected: false
-//     },
-
-//     {
-//         name: '34564745663454',
-//         date: 'July 04, 2021',
-//         img: require('../assets/images/nfc1.png'),
-//         selected: false
-//     }
-// ]
 
 class History extends Component {
 
     state = {
-        data: []
+        data: [ServiceConstant.get_historydata()]
     }
     componentDidMount() {
         console.log('----', ServiceConstant.get_historydata())
-        this.setState({ data: [...this.state.data, ServiceConstant.get_historydata()] })
+        // this.setState({ data: [...this.state.data, ServiceConstant.get_historydata()] })
 
     }
 
     render() {
-        console.log('ff', this.state.data.length)
+       
+        console.log('data ------------------->', this.state.data)
         return (
             <SafeAreaView style={{ flex: 1, backgroundColor: '#f3fcff' }}>
                 <AppHeader navigation={this.props.navigation} title="History" />
@@ -91,7 +71,7 @@ class History extends Component {
                     elevation: 3
                 }}>
                     {
-                        this.state.data.length > 0
+                        this.state.data != ""
                             ?
                             <>
                                 <FlatList
@@ -110,14 +90,7 @@ class History extends Component {
                                             }
 
                                             <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('Data')} style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
-                                                {
-                                                    item.type == 'QR_CODE'
-                                                        ?
-                                                        <FastImage source={require('../assets/images/qr_code_1.png')} style={{ width: 30, height: 30, }} resizeMode="contain" />
-                                                        :
-                                                        null
-                                                }
-
+                                                <FastImage source={require('../assets/images/qr_code_1.png')} style={{ width: 30, height: 30, }} resizeMode="contain" />
                                                 <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.tit}</Text>
                                             </TouchableOpacity>
 
@@ -136,6 +109,8 @@ class History extends Component {
 
 
                             :
+
+
                             <View style={{ height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
                                 <Text>No records found.</Text>
                             </View>

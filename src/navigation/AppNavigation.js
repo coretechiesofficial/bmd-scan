@@ -10,7 +10,7 @@ import ScanNfc from '../components/ScanNfc';
 import History from '../components/History';
 import Data from '../components/Data'
 import Scancode from '../components/ScanCode';
-
+import Verify from '../components/Verify';
 
 
 const Stack = createStackNavigator();
@@ -27,6 +27,7 @@ function AppNavigation() {
                 <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
                 <Stack.Screen name="Data" component={Data} options={{ headerShown: false }} />
                 <Stack.Screen name="Scancode" component={Scancode} options={{ headerShown: false }} />
+                <Stack.Screen name="Verify" component={Verify} options={{ headerShown: false }} />
                 
                 <Stack.Screen name="AppTabs" component={AppTabs} options={{ headerShown: false }} />
             </Stack.Navigator>
