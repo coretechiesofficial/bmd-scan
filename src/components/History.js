@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     View, StyleSheet, Image,
-    ImageBackground, SafeAreaView, AsyncStorage, Text,
+    ImageBackground, SafeAreaView, Text,
     BackHandler, Alert, ToastAndroid, TouchableOpacity, StatusBar, FlatList
 } from 'react-native';
 
@@ -9,24 +9,26 @@ import FastImage from 'react-native-fast-image'
 import { colors } from '../styles/styles';
 import { AppHeader } from '../utility/AppHeader'
 import { ServiceConstant } from '../constants/ServiceConstant'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
 class History extends Component {
 
     state = {
-        data: [ServiceConstant.get_historydata()]
+        data: [],
+        qr_data : []
     }
-    componentDidMount() {
-        console.log('----', ServiceConstant.get_historydata())
-        // this.setState({ data: [...this.state.data, ServiceConstant.get_historydata()] })
+
+    async componentDidMount() {
+        let result = await AsyncStorage.getItem('hisdata')
+        console.log('result', result)
+        this.setState({ data: JSON.parse(result) })
 
     }
 
     render() {
-       
-        console.log('data ------------------->', this.state.data)
+        console.log('daa', this.state.data)
         return (
             <SafeAreaView style={{ flex: 1, backgroundColor: '#f3fcff' }}>
                 <AppHeader navigation={this.props.navigation} title="History" />
@@ -71,7 +73,7 @@ class History extends Component {
                     elevation: 3
                 }}>
                     {
-                        this.state.data != ""
+                        this.state.data.length > 0
                             ?
                             <>
                                 <FlatList
@@ -80,7 +82,7 @@ class History extends Component {
                                     showsVerticalScrollIndicator={false}
                                     renderItem={({ item, index }) => (
 
-                                        <View style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center' }}>
+                                        <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('Data', { from : 'history', item: item.data })} style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center' }}>
                                             {
                                                 item.selected == true
                                                     ?
@@ -89,15 +91,15 @@ class History extends Component {
                                                     <FastImage source={require('../assets/images/uncheck.png')} style={{ width: 18, height: 18, left: 20 }} resizeMode="contain" />
                                             }
 
-                                            <TouchableOpacity activeOpacity={0.7} onPress={() => this.props.navigation.navigate('Data')} style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40 }}>
+                                            <View  style={{ flexDirection: 'row', alignItems: 'center', width: '40%', marginLeft: 40, }}>
                                                 <FastImage source={require('../assets/images/qr_code_1.png')} style={{ width: 30, height: 30, }} resizeMode="contain" />
-                                                <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.tit}</Text>
-                                            </TouchableOpacity>
+                                                <Text numberOfLines={1} style={{ color: colors.denim, fontSize: 12, left: 12 }}>{item.data}</Text>
+                                            </View>
 
                                             <View style={{ flexDirection: 'row', alignItems: 'center', width: '30%', marginLeft: 40 }}>
                                                 <Text numberOfLines={1} style={{ color: '#898c8f', fontSize: 12, left: 12 }}>July 01, 2021</Text>
                                             </View>
-                                        </View>
+                                        </TouchableOpacity>
                                     )}
                                 />
                                 <View style={{ marginVertical: 10, justifyContent: 'flex-end', alignItems: 'flex-end', marginHorizontal: 10 }}>

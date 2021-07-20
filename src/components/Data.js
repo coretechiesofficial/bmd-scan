@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {
     View, Image,
     SafeAreaView, Text,
-    TouchableOpacity, ScrollView, Modal, Dimensions
+    TouchableOpacity, 
+    ScrollView, Modal, 
+    Dimensions
 } from 'react-native';
 import FastImage from 'react-native-fast-image'
 import { colors } from '../styles/styles';
@@ -14,24 +16,18 @@ class Data extends Component {
 
     state = {
         show: false,
-        city : this.props.route.params ? this.props.route.params.data.city : '',
-        country : this.props.route.params ? this.props.route.params.data.country : '',
-        email : this.props.route.params ? this.props.route.params.data.email : '',
-        fax : this.props.route.params ? this.props.route.params.data.fax : '',
-        mobile_no : this.props.route.params ? this.props.route.params.data.mobile_no : '',
-        name : this.props.route.params ? this.props.route.params.data.name : '',
-        org : this.props.route.params ? this.props.route.params.data.org : '',
-        state : this.props.route.params ? this.props.route.params.data.state : '',
-        street : this.props.route.params ? this.props.route.params.data.street : '',
-        title : this.props.route.params ? this.props.route.params.data.title : '',
-        website : this.props.route.params ? this.props.route.params.data.website : '',
-        workpno : this.props.route.params ? this.props.route.params.data.workpno : '',
-        zipcode : this.props.route.params ? this.props.route.params.data.zipcode : '',
-    
+        title: '',
+        from: this.props.route.params ? this.props.route.params.from : ''
     }
 
     componentDidMount() {
-        console.log('props value', this.props.route.params.data)
+        console.log('props value', this.props.route.params.item)
+        if (this.state.from == 'history') {
+            this.setState({ title: this.props.route.params.item })
+        }
+        else {
+            this.setState({ title: this.props.route.params.data })
+        }
     }
 
     rendorModal = () => {
@@ -89,35 +85,35 @@ class Data extends Component {
                     </View>
 
                     {/* ------------------Name view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginTop: 10, marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginTop: 10, marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/account_1.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
                         <View style={{ paddingLeft: 10, width: '80%', justifyContent: 'center', height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>NAME</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.name}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------Name view end here---------------- */}
 
                     {/* ------------------COMPANY view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/office_building.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>COMPANY</Text>
-                            <Text style={{ fontSize: 12 , }}>{this.state.org}</Text>
+                            <Text style={{ fontSize: 12, }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------COMPANY view end here---------------- */}
 
                     {/* ------------------TITLE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    <View style={{ flexDirection: 'row', marginHorizontal: 10, marginTop: 5, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/card_account_details.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%',  paddingVertical:5, height:50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>TITLE</Text>
                             <Text style={{ fontSize: 12 }}>{this.state.title}</Text>
                         </View>
@@ -125,104 +121,104 @@ class Data extends Component {
                     {/* ------------------TITLE view end here---------------- */}
 
                     {/* ------------------PHONE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/phone.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>PHONE</Text>
-                            <Text style={{ fontSize: 12 }}>+ {this.state.workpno ? this.state.workpno : this.state.mobile_no}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------PHONE view end here---------------- */}
 
                     {/* ------------------EMAIL view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/email.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%',paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>EMAIL</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.email}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------EMAIL view end here---------------- */}
 
                     {/* ------------------STREET view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/road_variant.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>STREET</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.street}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------STREET view end here---------------- */}
 
                     {/* ------------------CITY view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/city_variant.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>CITY</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.city}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------CITY view end here---------------- */}
 
                     {/* ------------------STATE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/map_marker.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>STATE</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.state}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------STATE view end here---------------- */}
 
 
                     {/* ------------------ZIP CODE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/postage_stamp.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>ZIP CODE</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.zipcode}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------ZIP CODE view end here---------------- */}
 
                     {/* ------------------WEBSITE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/web.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>WEBSITE</Text>
-                            <Text style={{ fontSize: 12 }}>{this.state.website}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------WEBSITE view end here---------------- */}
 
                     {/* ------------------FAX view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/fax.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
-                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical:5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
+                        <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
                             <Text style={{ color: colors.denim, fontSize: 14 }}>FAX</Text>
-                            <Text style={{ fontSize: 12 }}>+ {this.state.fax}</Text>
+                            <Text style={{ fontSize: 12 }}>-</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------FAX view end here---------------- */}
 
                     {/* ------------------BIRTHDAY view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/cake_variant.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
@@ -230,11 +226,11 @@ class Data extends Component {
                             <Text style={{ color: colors.denim, fontSize: 14 }}>BIRTHDAY</Text>
                             <Text style={{ fontSize: 12 }}>01-07-1990</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------BIRTHDAY view end here---------------- */}
 
                     {/* ------------------NOTE view start here---------------- */}
-                    <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
+                    {/* <View style={{ flexDirection: 'row', marginHorizontal: 10, backgroundColor: 'white', alignItems: 'center' }}>
                         <View style={{ width: '20%', height: 50, justifyContent: 'center', alignItems: 'center', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, borderRightColor: '#bbbbbb', borderRightWidth: 1 }}>
                             <FastImage source={require('../assets/images/note_edit.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
@@ -242,7 +238,7 @@ class Data extends Component {
                             <Text style={{ color: colors.denim, fontSize: 14 }}>NOTE</Text>
                             <Text style={{ fontSize: 11 }}>Lorem ipsum dolor set amet that can define it well  content.</Text>
                         </View>
-                    </View>
+                    </View> */}
                     {/* ------------------NOTE view end here---------------- */}
 
                     <View style={{ height: 80 }}></View>
