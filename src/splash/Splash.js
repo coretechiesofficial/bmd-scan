@@ -12,7 +12,7 @@ class Splash extends Component {
             
            
         }, 1200) 
-        this.props.navigation.navigate('AppTabs')
+        this.props.navigation.navigate('AppTabs',{move : 'splash'})
     }
 
     render() {

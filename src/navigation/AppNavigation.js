@@ -19,7 +19,7 @@ function AppNavigation() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Splash" screenOptions={{
-                cardStyleInterpolator: CardStyleInterpolators.forNoAnimation
+                cardStyleInterpolator: CardStyleInterpolators.forRevealFromBottomAndroid
             }}>
                
                 <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />

@@ -11,6 +11,41 @@ import { colors } from '../styles/styles';
 
 
 class Home extends Component {
+
+
+    state = {
+        doubleBackToExitPressedOnce: false,
+    }
+
+    handleBackButton = () => {
+        if (this.props.navigation.isFocused()) {
+            if (this.state.doubleBackToExitPressedOnce == true) {
+                BackHandler.exitApp();
+                return true;
+            }
+            ToastAndroid.show('Press again for exit app', ToastAndroid.SHORT)
+            this.setState({
+                doubleBackToExitPressedOnce: true,
+            })
+            setTimeout(() => {
+                this.setState({
+                    doubleBackToExitPressedOnce: false,
+                })
+            }, 2000);
+            return true;
+        }
+
+    };
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);
+    }
+
+
     render() {
         return (
             <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
@@ -23,8 +58,8 @@ class Home extends Component {
 
                     {/* ------------------Scan Code View start here----------------------- */}
                     <TouchableOpacity
-                     activeOpacity={0.9}
-                     onPress={()=> this.props.navigation.navigate('Scancode')}
+                        activeOpacity={0.9}
+                        onPress={() => this.props.navigation.navigate('Scancode')}
                         style={{
                             backgroundColor: colors.duck_egg_blue,
                             justifyContent: 'center',
@@ -48,26 +83,26 @@ class Home extends Component {
                     {/* ------------------Scan Code View end here----------------------- */}
 
                     {/* ------------------Scan Tag View start here----------------------- */}
-                    <TouchableOpacity 
-                    activeOpacity={0.9}
-                    onPress={()=> this.props.navigation.navigate('ScanNfc')}
-                    style={{
-                        backgroundColor: colors.duck_egg_blue,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '50%',
-                        height: 120,
-                        borderRadius: 5,
-                        shadowColor: "#000",
-                        shadowOffset: {
-                            width: 0,
-                            height: 1,
-                        },
-                        shadowOpacity: 0.22,
-                        shadowRadius: 2.22,
-                        marginLeft: 6,
-                        elevation: 3,
-                    }}>
+                    <TouchableOpacity
+                        activeOpacity={0.9}
+                        onPress={() => this.props.navigation.navigate('ScanNfc')}
+                        style={{
+                            backgroundColor: colors.duck_egg_blue,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: '50%',
+                            height: 120,
+                            borderRadius: 5,
+                            shadowColor: "#000",
+                            shadowOffset: {
+                                width: 0,
+                                height: 1,
+                            },
+                            shadowOpacity: 0.22,
+                            shadowRadius: 2.22,
+                            marginLeft: 6,
+                            elevation: 3,
+                        }}>
                         <FastImage source={require('../assets/images/nfc.png')} style={{ width: 60, height: 60 }} resizeMode="contain" />
                         <Text style={{ color: colors.denim, fontSize: 12, top: 5 }}>Scan Tag</Text>
                     </TouchableOpacity>
@@ -102,26 +137,26 @@ class Home extends Component {
                     {/* ------------------Verify View end here----------------------- */}
 
                     {/* ------------------Scan Tag View start here----------------------- */}
-                    <TouchableOpacity 
-                     activeOpacity={0.9}
-                     onPress={()=> this.props.navigation.navigate('History')}
-                    style={{
-                        backgroundColor: colors.duck_egg_blue,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '50%',
-                        height: 120,
-                        borderRadius: 5,
-                        shadowColor: "#000",
-                        shadowOffset: {
-                            width: 0,
-                            height: 1,
-                        },
-                        shadowOpacity: 0.22,
-                        shadowRadius: 2.22,
-                        marginLeft: 6,
-                        elevation: 3,
-                    }}>
+                    <TouchableOpacity
+                        activeOpacity={0.9}
+                        onPress={() => this.props.navigation.navigate('History')}
+                        style={{
+                            backgroundColor: colors.duck_egg_blue,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: '50%',
+                            height: 120,
+                            borderRadius: 5,
+                            shadowColor: "#000",
+                            shadowOffset: {
+                                width: 0,
+                                height: 1,
+                            },
+                            shadowOpacity: 0.22,
+                            shadowRadius: 2.22,
+                            marginLeft: 6,
+                            elevation: 3,
+                        }}>
                         <FastImage source={require('../assets/images/file.png')} style={{ width: 60, height: 60 }} resizeMode="contain" />
                         <Text style={{ color: colors.denim, fontSize: 12, top: 5 }}>History</Text>
                     </TouchableOpacity>

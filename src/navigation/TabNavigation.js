@@ -17,29 +17,30 @@ const Tab = createBottomTabNavigator();
 
 export const AppTabs = () => {
     return (
-        <Tab.Navigator initialRouteName="Dashboard"
+        <Tab.Navigator
+            initialRouteName="Home"
             tabBarOptions={{
                 activeBackgroundColor: colors.darkish_blue,
                 inactiveBackgroundColor: colors.darkish_blue,
                 activeTintColor: 'white',
                 inactiveTintColor: '#11619d',
-                tabStyle : {
-                    justifyContent:'center',
+                tabStyle: {
+                    justifyContent: 'center',
                 },
-                labelStyle : {
-                    fontSize:13
+                labelStyle: {
+                    fontSize: 13
                 }
             }}
-            
-            >
-            
+
+        >
+
             <Tab.Screen
                 name="Home"
                 component={Home}
-                
+
                 options={{
-                   tabBarLabel: 'Home',
-                
+                    tabBarLabel: 'Home',
+
                 }}
             />
 

@@ -1439,6 +1439,7 @@ drawable src_assets_images_qr_code
 drawable src_assets_images_qr_code_1
 drawable src_assets_images_road_variant
 drawable src_assets_images_search
+drawable src_assets_images_torch
 drawable src_assets_images_uncheck
 drawable src_assets_images_web
 drawable src_assets_images_writing
