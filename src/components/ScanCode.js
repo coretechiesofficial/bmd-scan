@@ -12,6 +12,7 @@ import IntentLauncher, { IntentConstant } from 'react-native-intent-launcher';
 import { request, PERMISSIONS } from 'react-native-permissions';
 import { ServiceConstant } from '../constants/ServiceConstant'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { set } from 'react-native-reanimated';
 
 const openAppSettings = () => {
     if (Platform.OS === 'ios') {
@@ -30,12 +31,18 @@ class Scancode extends Component {
         appState: AppState.currentState,
         scan_data: [],
         date: new Date(),
-        visible : false
+        visible: false,
+
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         this.requestPermision()
         AppState.addEventListener('change', this._handleAppStateChange);
+        let result = await AsyncStorage.getItem('hisdata');
+        if(result) {
+            this.setState({ scan_data: JSON.parse(result) })
+        }
+       
     }
 
     componentWillUnmount() {
@@ -43,7 +50,7 @@ class Scancode extends Component {
     }
 
     onSuccess = async (e) => {
-        //console.log('ee--', e)
+        // console.log('ee--', e)
 
         let obj = {};
         obj['type'] = e.type
@@ -52,18 +59,14 @@ class Scancode extends Component {
         obj['date'] = this.state.date
         obj['selected'] = false
 
-        AsyncStorage.getItem('hisdata', (err, resp) => {       // Getting data from AsyncStorage
-            let responseData = JSON.parse(resp)
-            this.state.scan_data = responseData || []
-            this.state.scan_data.push(obj)
-            AsyncStorage.setItem('hisdata', JSON.stringify(this.state.scan_data))  // Setting Your Data in AsyncStorage
-                .then(res => console.log('success!'))
-                .catch(error => console.log('error!'))
+        this.state.scan_data.push(obj)
+       
+        AsyncStorage.setItem('hisdata', JSON.stringify(this.state.scan_data))  // Setting Your Data in AsyncStorage
 
-        })
         setTimeout(() => {
             this.props.navigation.navigate('Data', { data: e.data, from: 'scan', })
         }, 300)
+
     };
 
     marker = () => {
@@ -136,14 +139,14 @@ class Scancode extends Component {
         return (
             <SafeAreaView style={{ flex: 1 }}>
                 <AppHeader navigation={this.props.navigation} title="Scan QR" />
-                <View style={{flex: 1, backgroundColor: 'rgba(0, 0, 0,0.1)' }}>
-                    <TouchableOpacity activeOpacity={0.6} onPress={()=> this.setState({visible: !this.state.visible})} style={{position:'absolute', zIndex:1, backgroundColor:'white', paddingHorizontal:5, paddingVertical:2, borderRadius:5, right:10, margin:20}}>
-                        <Image source={require('../assets/images/torch.png')} style={{width:25, height:25}} resizeMode="contain"/>
+                <View style={{ flex: 1, backgroundColor: 'rgba(0, 0, 0,0.1)' }}>
+                    <TouchableOpacity activeOpacity={0.6} onPress={() => this.setState({ visible: !this.state.visible })} style={{ position: 'absolute', zIndex: 1, backgroundColor: 'white', paddingHorizontal: 5, paddingVertical: 2, borderRadius: 5, right: 10, margin: 20 }}>
+                        <Image source={require('../assets/images/torch.png')} style={{ width: 25, height: 25 }} resizeMode="contain" />
                     </TouchableOpacity>
 
                     <QRCodeScanner
                         onRead={this.onSuccess}
-                        flashMode={this.state.visible ? RNCamera.Constants.FlashMode.torch: RNCamera.Constants.FlashMode.off}
+                        flashMode={this.state.visible ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
                         containerStyle={{ flex: 1 }}
                         cameraStyle={{ height: '100%', }}
                         showMarker={true}

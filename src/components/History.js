@@ -27,11 +27,18 @@ class History extends Component {
 
     async componentDidMount() {
         let result = await AsyncStorage.getItem('hisdata')
-        console.log('result', result)
+        console.log('result----------', result)
         this.setState({ data: JSON.parse(result) })
-
+        this.removeDuplicate(JSON.parse(result))
     }
 
+    removeDuplicate = (array) => {
+        const ids = array.map(o => o.data)
+        const filtered = array.filter(({data}, index) => !ids.includes(data, index + 1)) 
+        //console.log(filtered)
+        this.setState({data: filtered.reverse()})
+        
+    }
 
     showDate = (date) => {
         let new_date = date.slice(0, 10)
@@ -113,15 +120,15 @@ class History extends Component {
                 }}>
 
                     <TouchableOpacity activeOpacity={0.7} onPress={() => this.handleData()} style={{ width: '35%', justifyContent: 'center', alignItems: 'center' }}>
-                        <Text style={{ color: this.state.iall_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.iall_selected ? 'bold' : '' }}>All</Text>
+                        <Text style={{ color: this.state.iall_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.iall_selected ? 'bold' : 'normal' }}>All</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity activeOpacity={0.7} onPress={() => this.showQrData()} style={{ width: '35%', justifyContent: 'center', alignItems: 'center', }}>
-                        <Text style={{ color: this.state.isqr_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isqr_selected ? 'bold' : '' }}>Qr</Text>
+                        <Text style={{ color: this.state.isqr_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isqr_selected ? 'bold' : 'normal' }}>QR</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity activeOpacity={0.7} onPress={() => this.setState({ isnfc_selected: true, isqr_selected: false, iall_selected: false })} style={{ width: '30%', justifyContent: 'center', alignItems: 'center', }}>
-                        <Text style={{ color: this.state.isnfc_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isnfc_selected ? 'bold' : '' }}>Nfc</Text>
+                        <Text style={{ color: this.state.isnfc_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isnfc_selected ? 'bold' : 'normal' }}>NFC</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -153,7 +160,7 @@ class History extends Component {
                                             showsVerticalScrollIndicator={false}
                                             renderItem={({ item, index }) => (
 
-                                                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('Data', { from: 'history', item: item.data })} style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center', }}>
+                                                <TouchableOpacity activeOpacity={0.5} onPress={() => this.props.navigation.navigate('Data', { from: 'history', item: item.data , date: item.date})} style={{ flexDirection: 'row', borderBottomColor: '#bbbbbb', borderBottomWidth: 1, paddingVertical: 10, marginVertical: 2, alignItems: 'center', }}>
                                                     {
                                                         item.selected == true
                                                             ?

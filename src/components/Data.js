@@ -9,7 +9,7 @@ import {
 import FastImage from 'react-native-fast-image'
 import { colors } from '../styles/styles';
 import { AppHeader } from '../utility/AppHeader'
-
+import { ParseMonth } from '../constants/helper method/CommanMethod'
 
 
 class Data extends Component {
@@ -17,16 +17,17 @@ class Data extends Component {
     state = {
         show: false,
         title: '',
-        from: this.props.route.params ? this.props.route.params.from : ''
+        from: this.props.route.params ? this.props.route.params.from : '',
+        date : new Date().toLocaleDateString()
     }
 
     componentDidMount() {
-        console.log('props value', this.props.route.params.item)
+        //console.log('props value', this.props.route.params.item)
         if (this.state.from == 'history') {
-            this.setState({ title: this.props.route.params.item })
+            this.setState({ title: this.props.route.params.item,  })
         }
         else {
-            this.setState({ title: this.props.route.params.data })
+            this.setState({ title: this.props.route.params.data , })
         }
     }
 
@@ -80,7 +81,7 @@ class Data extends Component {
                         </TouchableOpacity>
 
                         <TouchableOpacity activeOpacity={0.7} style={{ width: '35%', justifyContent: 'center', alignItems: 'center', }}>
-                            <Text style={{ color: '#898c8f', fontSize: 12 }}>July 01, 2021</Text>
+                            <Text style={{ color: '#898c8f', fontSize: 12 }}>{this.state.date}</Text>
                         </TouchableOpacity>
                     </View>
 
@@ -114,7 +115,7 @@ class Data extends Component {
                             <FastImage source={require('../assets/images/card_account_details.png')} style={{ width: 20, height: 20 }} resizeMode="contain" />
                         </View>
                         <View style={{ paddingLeft: 10, width: '80%', paddingVertical: 5, height: 50, borderBottomColor: '#bbbbbb', borderBottomWidth: 1, }}>
-                            <Text style={{ color: colors.denim, fontSize: 14 }}>TITLE</Text>
+                            <Text style={{ color: colors.denim, fontSize: 14 }}>TEXT</Text>
                             <Text style={{ fontSize: 12 }}>{this.state.title}</Text>
                         </View>
                     </View>
