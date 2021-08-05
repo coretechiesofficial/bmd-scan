@@ -23,6 +23,8 @@ import com.dylanvann.fastimage.FastImageViewPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-intent-launcher
 import com.poberwong.launcher.IntentLauncherPackage;
+// react-native-nfc-manager
+import community.revteltech.nfc.NfcManagerPackage;
 // react-native-permissions
 import com.zoontek.rnpermissions.RNPermissionsPackage;
 // react-native-reanimated
@@ -84,6 +86,7 @@ public class PackageList {
       new FastImageViewPackage(),
       new RNGestureHandlerPackage(),
       new IntentLauncherPackage(),
+      new NfcManagerPackage(),
       new RNPermissionsPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),

@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {
     View, StyleSheet, Image,
     ImageBackground, SafeAreaView, AsyncStorage, Text,
-    BackHandler, Alert, ToastAndroid, TouchableOpacity
+    BackHandler, Alert, ToastAndroid, TouchableOpacity, Button
 } from 'react-native';
 import { colors } from '../styles/styles';
 import FastImage from 'react-native-fast-image'
 
 
 class About extends Component {
+
+    
+
     render() {
         return (
             <SafeAreaView>
@@ -24,6 +27,9 @@ class About extends Component {
                 <View style={{  bottom:30, marginHorizontal:20, }}>
                     <Text style={{color: colors.denim, textAlign:'center'}}>Lorem ipsum dolor set amet Lorem ipsum dolor set ametLorem ipsum dolor set ametLorem ipsum dolor set ametLorem ipsum dolor set ametLorem ipsum dolor set ametLorem ipsum dolor set amet.</Text>
                 </View>
+
+              
+                
             </SafeAreaView>
         )
     }

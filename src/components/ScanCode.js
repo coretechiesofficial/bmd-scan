@@ -32,10 +32,12 @@ class Scancode extends Component {
         scan_data: [],
         date: new Date(),
         visible: false,
+        from_screen : ''
 
     }
 
     async componentDidMount() {
+       this.setState({from_screen : this.props.route.params.nav})
         this.requestPermision()
         AppState.addEventListener('change', this._handleAppStateChange);
         let result = await AsyncStorage.getItem('hisdata');
@@ -51,21 +53,29 @@ class Scancode extends Component {
 
     onSuccess = async (e) => {
         // console.log('ee--', e)
-
-        let obj = {};
-        obj['type'] = e.type
-        obj['data'] = e.data
-        obj['id'] = e.target
-        obj['date'] = this.state.date
-        obj['selected'] = false
-
-        this.state.scan_data.push(obj)
-       
-        AsyncStorage.setItem('hisdata', JSON.stringify(this.state.scan_data))  // Setting Your Data in AsyncStorage
-
-        setTimeout(() => {
-            this.props.navigation.navigate('Data', { data: e.data, from: 'scan', })
-        }, 300)
+        if(this.state.from_screen == 'verfy') {
+            setTimeout(()=> {
+                this.props.navigation.navigate('Verify', { vdata: e.data, by : 'ver' })
+            },300)
+            
+        }
+        else {
+            let obj = {};
+            obj['type'] = e.type
+            obj['data'] = e.data
+            obj['id'] = e.target
+            obj['date'] = this.state.date
+            obj['selected'] = false
+    
+            this.state.scan_data.push(obj)
+           
+            AsyncStorage.setItem('hisdata', JSON.stringify(this.state.scan_data))  // Setting Your Data in AsyncStorage
+    
+            setTimeout(() => {
+                this.props.navigation.navigate('Data', { data: e.data, from: 'scan', })
+            }, 300)
+        }
+        
 
     };
 
@@ -151,6 +161,8 @@ class Scancode extends Component {
                         cameraStyle={{ height: '100%', }}
                         showMarker={true}
                         customMarker={() => this.marker()}
+                        reactivate={true}
+                        
                     />
                 </View>
             </SafeAreaView>

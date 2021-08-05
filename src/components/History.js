@@ -11,7 +11,7 @@ import { AppHeader } from '../utility/AppHeader'
 import { ServiceConstant } from '../constants/ServiceConstant'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ParseMonth } from '../constants/helper method/CommanMethod'
-
+import NfcManager, { NfcEvents, Ndef , NfcTech, } from 'react-native-nfc-manager';
 
 class History extends Component {
 
@@ -26,6 +26,7 @@ class History extends Component {
     }
 
     async componentDidMount() {
+       
         let result = await AsyncStorage.getItem('hisdata')
         console.log('result----------', result)
         this.setState({ data: JSON.parse(result) })
@@ -119,17 +120,15 @@ class History extends Component {
                     elevation: 3,
                 }}>
 
-                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.handleData()} style={{ width: '35%', justifyContent: 'center', alignItems: 'center' }}>
+                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.handleData()} style={{ width: '50%', justifyContent: 'center', alignItems: 'center' }}>
                         <Text style={{ color: this.state.iall_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.iall_selected ? 'bold' : 'normal' }}>All</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.showQrData()} style={{ width: '35%', justifyContent: 'center', alignItems: 'center', }}>
+                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.showQrData()} style={{ width: '50%', justifyContent: 'center', alignItems: 'center', }}>
                         <Text style={{ color: this.state.isqr_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isqr_selected ? 'bold' : 'normal' }}>QR</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity activeOpacity={0.7} onPress={() => this.setState({ isnfc_selected: true, isqr_selected: false, iall_selected: false })} style={{ width: '30%', justifyContent: 'center', alignItems: 'center', }}>
-                        <Text style={{ color: this.state.isnfc_selected ? colors.darkish_blue : colors.denim, fontSize: 14, fontWeight: this.state.isnfc_selected ? 'bold' : 'normal' }}>NFC</Text>
-                    </TouchableOpacity>
+                   
                 </View>
 
                 {

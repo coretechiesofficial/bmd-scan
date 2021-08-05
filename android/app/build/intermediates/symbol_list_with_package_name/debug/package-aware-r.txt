@@ -1425,6 +1425,7 @@ drawable src_assets_images_checkedbox
 drawable src_assets_images_city_variant
 drawable src_assets_images_down_arrow
 drawable src_assets_images_email
+drawable src_assets_images_exclamation_mark
 drawable src_assets_images_fax
 drawable src_assets_images_file
 drawable src_assets_images_logo
@@ -1437,6 +1438,7 @@ drawable src_assets_images_phone
 drawable src_assets_images_postage_stamp
 drawable src_assets_images_qr_code
 drawable src_assets_images_qr_code_1
+drawable src_assets_images_remove
 drawable src_assets_images_road_variant
 drawable src_assets_images_search
 drawable src_assets_images_torch
