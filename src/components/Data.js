@@ -25,7 +25,8 @@ class Data extends Component {
         show: false,
         title: '',
         from: this.props.route.params ? this.props.route.params.from : '',
-        date : new Date().toLocaleDateString()
+        date : new Date().toLocaleDateString(),
+        visible_err : false
     }
 
   async  componentDidMount() {
@@ -105,6 +106,26 @@ class Data extends Component {
         )
     }
 
+    rendorWarningModal = () => {
+        return (
+            <Modal visible={this.state.visible_err} transparent={true} animationType='fade'>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.3)' }}>
+                    <View style={{ width: Dimensions.get('screen').width / 1.2, height: 125, backgroundColor: 'white', borderRadius: 2 }}>
+                        <View style={{ marginTop: 20,  }}>    
+                            <Text style={{ color: colors.denim, fontSize: 15, marginLeft:10 }}>Place device on tag to be encoded.</Text>
+                        </View>
+                        <View style={{ marginVertical: 42,  flexDirection: 'row', justifyContent: 'center', alignItems:'center', borderTopColor: '#eef6fc', borderTopWidth:1 }}>                            
+                            <TouchableOpacity activeOpacity={0.8} onPress={() => this.setState({visible_err: false})} style={{ width: '40%', marginVertical:5, height: 30, backgroundColor: colors.darkish_blue, borderRadius: 3, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={{ color: 'white' }}>Ok</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+
+            </Modal>
+        )
+    }
+
     onLaterPress = () => {
         this.setState({ show: false })
         this.props.navigation.navigate('AppTabs')
@@ -125,13 +146,13 @@ class Data extends Component {
             let bytes = buildUrlPayload(this.state.title);
             await NfcManager.writeNdefMessage(bytes);
             await NfcManager.cancelTechnologyRequest().catch(() => 0);
-            this.setState({ show: true })
+            this.setState({ visible_err:false, show: true })
             console.log('successfully write ndef');   
           } catch (ex) {
             console.warn('ex', ex);
             await NfcManager.cancelTechnologyRequest().catch(() => 0);
-            this.setState({ show: false })
-            alert('Hold the device near tag.')
+            this.setState({ visible_err: true, show: false })
+           
           }
     }
 
@@ -326,6 +347,14 @@ class Data extends Component {
                     this.state.show
                         ?
                         this.rendorModal()
+                        :
+                        null
+                }
+
+                {
+                    this.state.visible_err
+                        ?
+                        this.rendorWarningModal()
                         :
                         null
                 }

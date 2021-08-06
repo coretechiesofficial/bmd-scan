@@ -37,10 +37,12 @@ class Scancode extends Component {
     }
 
     async componentDidMount() {
-       this.setState({from_screen : this.props.route.params.nav})
+        
+        await this.setState({ from_screen: this.props.route.params ? this.props.route.params.nav : '' })
         this.requestPermision()
         AppState.addEventListener('change', this._handleAppStateChange);
         let result = await AsyncStorage.getItem('hisdata');
+        console.log('his result', result)
         if(result) {
             this.setState({ scan_data: JSON.parse(result) })
         }
@@ -59,7 +61,8 @@ class Scancode extends Component {
             },300)
             
         }
-        else {
+
+        
             let obj = {};
             obj['type'] = e.type
             obj['data'] = e.data
@@ -72,9 +75,9 @@ class Scancode extends Component {
             AsyncStorage.setItem('hisdata', JSON.stringify(this.state.scan_data))  // Setting Your Data in AsyncStorage
     
             setTimeout(() => {
-                this.props.navigation.navigate('Data', { data: e.data, from: 'scan', })
+                this.props.navigation.navigate('Data', { data: e.data})
             }, 300)
-        }
+        
         
 
     };
@@ -161,7 +164,7 @@ class Scancode extends Component {
                         cameraStyle={{ height: '100%', }}
                         showMarker={true}
                         customMarker={() => this.marker()}
-                        reactivate={true}
+                        
                         
                     />
                 </View>

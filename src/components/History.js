@@ -11,7 +11,7 @@ import { AppHeader } from '../utility/AppHeader'
 import { ServiceConstant } from '../constants/ServiceConstant'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ParseMonth } from '../constants/helper method/CommanMethod'
-import NfcManager, { NfcEvents, Ndef , NfcTech, } from 'react-native-nfc-manager';
+
 
 class History extends Component {
 
